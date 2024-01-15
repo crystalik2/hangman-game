@@ -95,8 +95,6 @@ export const startGame = () => {
     }
   });
 
-  console.log(wordToGuess);
-
   const hangmanImg = createHangmanImg();
   gameDiv.prepend(hangmanImg);
   gameDiv.appendChild(keyboardDiv);
