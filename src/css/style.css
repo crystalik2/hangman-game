@@ -42,7 +42,7 @@
   }
 
   .button-primary {
-    @apply rounded-md px-5 py-2 font-medium hover:shadow-lg bg-slate-300 enabled:hover:bg-slate-300 transition duration-200 
+    @apply rounded-md px-12 py-3 font-medium text-xl hover:shadow-lg bg-slate-300 enabled:hover:bg-slate-300 transition duration-200 
     enabled:dark:bg-indigo-500 enabled:dark:hover:bg-indigo-600  disabled:dark:bg-zinc-600 disabled:bg-slate-100 disabled:shadow-none;
   }
 

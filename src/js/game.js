@@ -105,10 +105,9 @@ export const startGame = () => {
   );
   document.getElementById("quit-btn").onclick = () => {
     const isSure = confirm("Are you sure you want to quit?");
-    if (isSure){
+    if (isSure) {
       stopGame("quit");
     }
-    
   };
 };
 
@@ -136,5 +135,11 @@ const stopGame = (status) => {
     "game"
   ).innerHTML += `<p>The word was: <span class='result-word'>${word}</span></p><button id='play-again-btn' class="button-primary px-5 py-2 mt-5">Start new game</button>`;
 
-  document.getElementById("play-again-btn").onclick = startGame;
+  document.getElementById("play-again-btn").onclick = returnToHomeScreen;
+};
+
+const returnToHomeScreen = () => {
+  gameDiv.innerHTML =
+    '<button id="start_game" type="button" class="button-primary">Start game</button>';
+  document.getElementById("start_game").addEventListener("click", startGame);
 };
