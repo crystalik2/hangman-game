@@ -1,10 +1,10 @@
-export const WORDS = [
-  "apple",
-  "cloud",
-  "orange",
-  "love",
-  "frontend",
-  "money", 
-];
+export const WORDS_COLLECTION = {
+  WORDS_EASY: ['Bell', 'Santa', 'Star', 'Time', 'Bear', 'Box', 'Chocolate', 'Tree', 'Kitty', 'Man', 'Night', 'Seed', 'Dog', 'Father', 'Garden', 'Door', 'Hand', 'Letter', 'Bed', 'Chicken', 'Story', 'Way', 'Farm', 'Friend', 'Ground', 'Name', 'Baby', 'Thing', 'Top', 'Nest', 'Paper', 'Song', 'Apple', 'Cake', 'Water', 'Back', 'Birth', 'Bread', 'Brother', 'Christmas', 'Day', 'Boat', 'Snow', 'Sun', 'Toy', 'Car', 'Egg', 'Head', 'Book', 'Boy', 'Doll', 'Rabbit', 'Stick', 'Window', 'House', 'Ring', 'Street', 'Child', 'Duck', 'Fish', 'Money', 'Bath', 'Chair', 'Eye', 'Wood', 'Morning', 'Rain', 'Shoe', 'Table', 'Picture', 'School', 'Smile', 'Coat', 'Cow', 'Goodbye', 'Grass', 'Leg', 'Robin', 'Girl', 'Hill', 'Milk', 'Sheep', 'Sister', 'Watch', 'Ball', 'Squirrel', 'Wind', 'Fire', 'Floor', 'Horse', 'Home', 'Mother', 'Party', 'Flower', 'Game', 'Pig', 'Bird', 'Cat', 'Corn', 'Foot'
+  ],
+  WORDS_MEDIUM: [ 'Abandon', 'Accomplish', 'Accumulate', 'Advocate', 'Ambitious', 'Authentic', 'Bewilder', 'Breathtaking', 'Circumstance', 'Coherent', 'Collaborate', 'Comprehend', 'Consequence', 'Contemplate', 'Contradict', 'Contribute', 'Convince', 'Dedicate', 'Deliberate', 'Deviate', 'Dilemma', 'Elaborate', 'Emerge', 'Endorse', 'Enthusiastic', 'Execute', 'Exemplify', 'Exploit', 'Facilitate', 'Flourish', 'Gracious', 'Harness', 'Illuminate', 'Immerse', 'Incentive', 'Incite', 'Inquire', 'Integrate', 'Juxtapose', 'Lament', 'Manifest', 'Nourish', 'Obligate', 'Obscure', 'Ponder', 'Prevail', 'Proficient', 'Provoke', 'Prolific', 'Reconcile', 'Recur', 'Reflect', 'Refrain', 'Reinforce', 'Relinquish', 'Renounce', 'Resilient', 'Retract', 'Reverberate', 'Salvage', 'Scrutinize', 'Serene', 'Simulate', 'Soothe', 'Spontaneous', 'Stimulate', 'Strive', 'Substantiate', 'Surpass', 'Sustain', 'Synthesize', 'Terminate', 'Thwart', 'Transcend', 'Unveil', 'Utilize', 'Validate', 'Vanish', 'Verify', 'Vigorous', 'Vindicate', 'Virtue', 'Vitality', 'Vivid', 'Volatile', 'Vulnerable', 'Wholesome', 'Widespread', 'Withstand', 'Zealous', 'Zeal', 'Denounce', 'Coalesce', 'Curtail', 'Facade', 'Inherent', 'Meticulous', 'Nebulous', 'Paramount', 'Ubiquitous',
+  ],
+  WORDS_HARD: ['Aberration', 'Acquiesce', 'Alacrity', 'Amalgamate', 'Anomaly', 'Apocryphal', 'Arcane', 'Bellicose', 'Cacophony', 'Capitulate', 'Chicanery', 'Cognizant', 'Concomitant', 'Conundrum', 'Deleterious', 'Disparate', 'Disseminate', 'Ebullient', 'Ephemeral', 'Esoteric', 'Exacerbate', 'Facetious', 'Fastidious', 'Garrulous', 'Grandiloquent', 'Harangue', 'Harbinger', 'Hegemony', 'Iconoclast', 'Idiosyncrasy', 'Ineffable', 'Inexorable', 'Ingenuous', 'Inscrutable', 'Insidious', 'Inveterate', 'Juxtaposition', 'Languid', 'Lethargic', 'Magnanimous', 'Malevolent', 'Mellifluous', 'Mercurial', 'Misanthrope', 'Munificent', 'Nefarious', 'Nihilism', 'Nonchalant', 'Obfuscate', 'Obsequious', 'Obstinate', 'Ominous', 'Panacea', 'Paradigm', 'Paragon', 'Pernicious', 'Perspicacious', 'Precarious', 'Propinquity', 'Quixotic', 'Redolent', 'Reticent', 'Salient', 'Sanguine', 'Sycophant', 'Tantamount', 'Trepidation', 'Ubiquitous', 'Unctuous', 'Vehement', 'Vicarious', 'Vindicate', 'Vitriolic', 'Vociferous', 'Wistful', 'Xenophobia', 'Zenith', 'Altruistic', 'Chimerical', 'Enervate', 'Equivocate', 'Ephemeral', 'Eschew', 'Hedonist', 'Ineffable', 'Languid', 'Pernicious', 'Perspicacious', 'Reticent', 'Resplendent', 'Sycophant', 'Trenchant', 'Unassailable', 'Unfettered', 'Unscrupulous', 'Unilateral', 'Unmitigated', 'Unprecedented', 'Untenable', 'Unwarranted'
+  ]
+}
 
-export const KEYBOARD_LETTERS = Array.from("QWERTYUIOPASDFGHJKLZXCVBNM");
+export const KEYBOARD_LETTERS = Array.from('QWERTYUIOPASDFGHJKLZXCVBNM');
