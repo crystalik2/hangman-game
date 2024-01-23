@@ -33,7 +33,7 @@ const createKeyboard = () => {
   const keyboardHTML = KEYBOARD_LETTERS.reduce(
     (acc, curr) =>
       acc +
-      `<button class="button-primary keyboard-button" id="button_${curr}">${curr}</button>`,
+      `<button class="button-primary button-keyboard" id="button_${curr}">${curr}</button>`,
     ''
   );
 
@@ -141,14 +141,10 @@ const stopGame = (status) => {
 
   document.getElementById(
     'game'
-  ).innerHTML += `<p>The word was: <span class='result-word'>${word}</span></p><button id='play-again-btn' class="button-primary px-5 py-2 mt-5">Start new game</button>`;
+  ).innerHTML += `<p>The word was: <span class='result-word'>${word}</span></p><button id='play-again-btn' class="button-primary px-12 py-3 mt-5">Start new game</button>`;
 
-  document.getElementById('play-again-btn').onclick = returnToHomeScreen;
+  document.getElementById('play-again-btn').onclick = startGame;
+
+  document.getElementById('game').innerHTML += '<form action="" class="flex flex-col mt-3"><label for="difficulty_select">Choose difficulty</label><select name="difficulty"     id="difficulty_select" class="text-black bg-yellow-400 focus:outline-none"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option> </select></form>'
 };
 
-const returnToHomeScreen = () => {
-  gameDiv.innerHTML =
-    '<button id="start_game" type="button" class="button-primary">Start game</button>';
-  logoH1.classList.remove('logo-sm');
-  document.getElementById('start_game').addEventListener('click', startGame);
-};

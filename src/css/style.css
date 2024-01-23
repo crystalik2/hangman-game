@@ -46,6 +46,10 @@
     enabled:dark:bg-indigo-500 enabled:dark:hover:bg-indigo-600  disabled:dark:bg-zinc-600 disabled:bg-slate-100 disabled:shadow-none;
   }
 
+  .button-keyboard {
+    @apply  px-5 py-2 text-lg w-10 h-10 m-1 sm:w-14 sm:h-14 sm:m-2 flex justify-center items-center;
+  }
+
   .button-secondary {
     @apply border border-black rounded-md hover:bg-slate-100 dark:border-white dark:hover:bg-zinc-600;
   }
@@ -60,10 +64,6 @@
 
   .keyboard {
     @apply max-w-2xl mt-5 flex justify-center flex-wrap;
-  }
-
-  .keyboard-button {
-    @apply w-10 h-10 m-1 sm:w-14 sm:h-14 sm:m-2 flex justify-center items-center;
   }
 
   .hangman-img {
