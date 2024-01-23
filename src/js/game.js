@@ -145,6 +145,5 @@ const stopGame = (status) => {
 
   document.getElementById('play-again-btn').onclick = startGame;
 
-  document.getElementById('game').innerHTML += '<form action="" class="flex flex-col mt-3"><label for="difficulty_select">Choose difficulty</label><select name="difficulty"     id="difficulty_select" class="text-black bg-yellow-400 focus:outline-none"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option> </select></form>'
 };
 
