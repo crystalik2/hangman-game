@@ -144,6 +144,5 @@ const stopGame = (status) => {
   ).innerHTML += `<p>The word was: <span class='result-word'>${word}</span></p><button id='play-again-btn' class="button-primary px-12 py-3 mt-5">Start new game</button>`;
 
   document.getElementById('play-again-btn').onclick = startGame;
-
 };
 
