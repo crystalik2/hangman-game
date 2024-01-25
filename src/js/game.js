@@ -3,16 +3,19 @@ import { WORDS_COLLECTION, KEYBOARD_LETTERS } from './consts';
 const gameDiv = document.getElementById('game');
 const logoH1 = document.getElementById('logo');
 
-const difficulty = localStorage.getItem('difficulty');
-const wordsCollectionObject = {
-  easy: WORDS_COLLECTION.WORDS_EASY,
-  medium: WORDS_COLLECTION.WORDS_MEDIUM,
-  hard: WORDS_COLLECTION.WORDS_HARD,
-};
-const WORDS = wordsCollectionObject[difficulty];
-
 let triesLeft;
 let winCount;
+
+const difficultyCheck = () => {
+  const difficulty = localStorage.getItem('difficulty');
+  const wordsCollectionObject = {
+    easy: WORDS_COLLECTION.WORDS_EASY,
+    medium: WORDS_COLLECTION.WORDS_MEDIUM,
+    hard: WORDS_COLLECTION.WORDS_HARD,
+  };
+  const WORDS = wordsCollectionObject[difficulty];
+  return WORDS;
+};
 
 const createPlaceholdersHTML = () => {
   const word = sessionStorage.getItem('word');
@@ -83,6 +86,8 @@ const checkLetter = (letter) => {
 };
 
 export const startGame = () => {
+  const WORDS = difficultyCheck();
+
   triesLeft = 10;
   winCount = 0;
   logoH1.classList.add('logo-sm');
@@ -145,4 +150,3 @@ const stopGame = (status) => {
 
   document.getElementById('play-again-btn').onclick = startGame;
 };
-
