@@ -1,4 +1,5 @@
 import { WORDS_COLLECTION, KEYBOARD_LETTERS } from './consts';
+import { chooseDifficulty } from './utils';
 
 const gameDiv = document.getElementById('game');
 const logoH1 = document.getElementById('logo');
@@ -6,7 +7,7 @@ const logoH1 = document.getElementById('logo');
 let triesLeft;
 let winCount;
 
-const difficultyCheck = () => {
+const checkDifficulty = () => {
   const difficulty = localStorage.getItem('difficulty');
   const wordsCollectionObject = {
     easy: WORDS_COLLECTION.WORDS_EASY,
@@ -86,7 +87,7 @@ const checkLetter = (letter) => {
 };
 
 export const startGame = () => {
-  const WORDS = difficultyCheck();
+  const WORDS = checkDifficulty();
 
   triesLeft = 10;
   winCount = 0;
@@ -149,4 +150,7 @@ const stopGame = (status) => {
   ).innerHTML += `<p>The word was: <span class='result-word'>${word}</span></p><button id='play-again-btn' class="button-primary px-12 py-3 mt-5">Start new game</button>`;
 
   document.getElementById('play-again-btn').onclick = startGame;
+
+  gameDiv.insertAdjacentHTML('beforeend', '<form action="" class="flex flex-col mt-3"> <label for="difficulty_select">Choose difficulty</label><select name="difficulty" id="difficulty_select" class="text-black bg-yellow-400 focus:outline-none"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option>  </select></form>')
+  chooseDifficulty();
 };
