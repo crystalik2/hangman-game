@@ -63,7 +63,11 @@
   }
 
   .keyboard {
-    @apply max-w-2xl mt-5 flex justify-center flex-wrap;
+    @apply max-w-2xl mt-5 flex flex-row justify-center flex-wrap;
+  }
+
+  .keyboard-row {
+    @apply flex;
   }
 
   .hangman-img {

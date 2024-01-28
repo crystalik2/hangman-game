@@ -34,14 +34,26 @@ const createKeyboard = () => {
   keyboard.classList.add('keyboard');
   keyboard.id = 'keyboard';
 
-  const keyboardHTML = KEYBOARD_LETTERS.reduce(
-    (acc, curr) =>
-      acc +
-      `<button class="button-primary button-keyboard" id="button_${curr}">${curr}</button>`,
-    ''
-  );
+  const row1 = KEYBOARD_LETTERS.slice(0, 10);
+  const row2 = KEYBOARD_LETTERS.slice(10, 19);
+  const row3 = KEYBOARD_LETTERS.slice(19, 27);
+  const rows = [row1, row2, row3];
 
-  keyboard.innerHTML = keyboardHTML;
+  rows.forEach((row) => {
+    const rowDiv = document.createElement('div');
+    rowDiv.classList.add('keyboard-row');
+
+    const keyboardRow = row.reduce(
+      (acc, curr) =>
+        acc +
+        `<button class="button-primary button-keyboard" id="button_${curr}">${curr}</button>`,
+      ''
+    );
+
+    rowDiv.innerHTML += keyboardRow;
+    keyboard.append(rowDiv);
+  });
+
   return keyboard;
 };
 
@@ -151,6 +163,9 @@ const stopGame = (status) => {
 
   document.getElementById('play-again-btn').onclick = startGame;
 
-  gameDiv.insertAdjacentHTML('beforeend', '<form action="" class="flex flex-col mt-3"> <label for="difficulty_select">Choose difficulty</label><select name="difficulty" id="difficulty_select" class="text-black bg-yellow-400 focus:outline-none"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option>  </select></form>')
+  gameDiv.insertAdjacentHTML(
+    'beforeend',
+    '<form action="" class="flex flex-col mt-3"> <label for="difficulty_select">Choose difficulty</label><select name="difficulty" id="difficulty_select" class="text-black bg-yellow-400 focus:outline-none"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option>  </select></form>'
+  );
   chooseDifficulty();
 };
