@@ -43,15 +43,13 @@ const createKeyboard = () => {
     const rowDiv = document.createElement('div');
     rowDiv.classList.add('keyboard-row');
 
-    const keyboardRow = row.reduce(
+    rowDiv.innerHTML += row.reduce(
       (acc, curr) =>
         acc +
         `<button class="button-primary button-keyboard" id="button_${curr}">${curr}</button>`,
       ''
     );
-
-    rowDiv.innerHTML += keyboardRow;
-    keyboard.append(rowDiv);
+    keyboard.innerHTML += rowDiv;
   });
 
   return keyboard;
