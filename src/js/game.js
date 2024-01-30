@@ -48,8 +48,8 @@ const createKeyboard = () => {
         acc +
         `<button class="button-primary button-keyboard" id="button_${curr}">${curr}</button>`,
       ''
-    );
-    keyboard.innerHTML += rowDiv;
+    )
+    keyboard.append(rowDiv);
   });
 
   return keyboard;
