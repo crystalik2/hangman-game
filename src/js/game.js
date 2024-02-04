@@ -43,22 +43,14 @@ const createKeyboard = () => {
     const rowDiv = document.createElement('div');
     rowDiv.classList.add('keyboard-row');
 
-    // rowDiv.innerHTML += row.reduce(
-    //   (acc, curr) =>
-    //     acc +
-    //     `<button class="button-primary button-keyboard" id="button_${curr}">${curr}</button>`,
-    //   ''
-    // )
     row.forEach(curr =>{
       const button = document.createElement('button')
       button.classList.add('button-primary','button-keyboard')
       button.id = `button_${curr}`
       button.textContent = curr;
-
       rowDiv.append(button)
     })
     
-
     keyboard.append(rowDiv);
   });
 
