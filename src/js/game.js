@@ -116,7 +116,7 @@ export const startGame = () => {
   const clickLetter = keyboardDiv.addEventListener('click', (event) => {
     if (event.target.tagName.toLowerCase() === 'button') {
       event.target.disabled = true;
-
+      event.target.classList.add('button-disabled')
       checkLetter(event.target.id.at(-1)); // because btn id is "button_A", so we send only alphabet letter
     }
   });
