@@ -30,7 +30,7 @@
 
 @layer components {
   #app {
-    @apply h-screen flex flex-col justify-center items-center dark:text-white dark:bg-zinc-800;
+    @apply h-svh flex flex-col justify-center items-center dark:text-white dark:bg-zinc-800;
   }
 
   .logo {
