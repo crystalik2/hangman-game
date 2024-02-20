@@ -51,7 +51,7 @@
   }
 
   .button-keyboard {
-    @apply  px-5 py-2 text-lg w-10 h-10 m-1 sm:w-12 sm:h-12 sm:m-[6px] md:w-14 md:h-14 md:m-2 flex justify-center items-center;
+    @apply  px-0 py-0 size-6 text-xs font-light m-1 xxs:size-8 xxs:text-sm xxs:font-medium xs:px-5 xs:py-2 xs:size-10 sm:text-lg sm:size-12 sm:m-[6px] md:w-14 md:h-14 md:m-2 flex justify-center items-center;
   }
 
   .button-secondary {
