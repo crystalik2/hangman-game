@@ -121,6 +121,14 @@ export const startGame = () => {
     }
   });
 
+  const clickKeyboardButton = document.addEventListener('keypress', (event) =>{
+    //const gameKeyboardButton = keyboardDiv.getElementById('button').innerText
+    if (KEYBOARD_LETTERS.includes(event.key.toUpperCase())){
+      console.log(`Button is: ${event.key}`)
+      console.log(keyboardDiv.querySelectorAll('button'));
+    }
+  })
+
   const hangmanImg = createHangmanImg();
   gameDiv.prepend(hangmanImg);
   gameDiv.appendChild(keyboardDiv);
