@@ -114,7 +114,7 @@ export const startGame = () => {
 
   const keyboardDiv = createKeyboard();
   const clickLetter = keyboardDiv.addEventListener('click', (event) => {
-    if (event.target.tagName.toLowerCase() === 'button') {
+    if (event.target.tagName === 'BUTTON') {
       event.target.disabled = true;
       event.target.classList.add('button-disabled')
       checkLetter(event.target.id.at(-1)); // because btn id is "button_A", so we send only alphabet letter
@@ -122,10 +122,12 @@ export const startGame = () => {
   });
 
   const clickKeyboardButton = document.addEventListener('keypress', (event) =>{
-    //const gameKeyboardButton = keyboardDiv.getElementById('button').innerText
-    if (KEYBOARD_LETTERS.includes(event.key.toUpperCase())){
-      console.log(`Button is: ${event.key}`)
-      console.log(keyboardDiv.querySelectorAll('button'));
+    const key = event.key.toUpperCase();
+    if (KEYBOARD_LETTERS.includes(key)){
+      const button = document.getElementById(`button_${key}`)
+      button.disabled = true;
+      button.classList.add('button-disabled')
+      checkLetter(key)
     }
   })
 
